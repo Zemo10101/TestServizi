@@ -13,6 +13,7 @@ public class TerzoServizio implements optionInterfaccia {
         return name;
     }
 
+
     @Override
     public int elabora(int a, int b, int c) {
         return a*b*c;

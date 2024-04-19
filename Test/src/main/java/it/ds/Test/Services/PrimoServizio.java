@@ -6,11 +6,10 @@ import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Service
 public class PrimoServizio implements optionInterfaccia {
 
-    private String NAME = "primoServizio";
+    private final String NAME = "primoServizio";
 
     @Override
     public String getName() {

@@ -10,11 +10,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TerzoServizio implements optionInterfaccia {
 
-    private String name = "terzoServizio";
+    private final String NAME = "terzoServizio";
 
     @Override
     public String getName() {
-        return name;
+        return this.NAME;
     }
 
     @Override

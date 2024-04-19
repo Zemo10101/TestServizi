@@ -4,6 +4,7 @@ import it.ds.Test.Interfaccia.optionInterfaccia;
 import it.ds.Test.models.modello;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,14 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@NoArgsConstructor
+@RequiredArgsConstructor
 public class OptionController {
 
-    private List<optionInterfaccia> servizi;
-    @Autowired
-    public OptionController(List<optionInterfaccia> servizi) {
-        this.servizi = servizi;
-    }
+    private final List<optionInterfaccia> servizi;
 
     @PostMapping("/calcolo")
     public ResponseEntity<Integer> calcolo(@RequestBody modello m) {
